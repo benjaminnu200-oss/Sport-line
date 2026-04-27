@@ -1,0 +1,28 @@
+@use "../utilities/mixins" as m;
+@use "../utilities/variables" as v;
+
+.nosotros {
+    @include m.flex (column, nowrap, center, center,0);
+    align-content: center;
+
+    p.historia {
+        font-size: 2rem;
+        color: aliceblue;
+        padding: 0.5rem;
+        margin: 2rem;
+    }
+
+    img.benjayagus {
+        height: 50vh;
+        width: 50vh;
+        margin: 100px;
+        border-radius: 75px;
+    }
+
+    .link {
+        font-size: 2rem;
+        color: rgb(70, 5, 131);
+        padding: 0.5rem;
+        margin: 2rem;
+    }
+}

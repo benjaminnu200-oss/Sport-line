@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+$fuentePrincipal: Oswald;
+$fuenteSecundaria: Audiowide;
+$colorPrincipal: aliceblue;
+$colorSecundario: #555252;
+$colorTerciario: #7fff00;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuentePrincipal;
+    color: $colorPrincipal;
+}
+
+body{
+    background-image:url(../assets/fondo.png);
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+
+.active {
+    background-color: grey;
+    color:aliceblue
+}

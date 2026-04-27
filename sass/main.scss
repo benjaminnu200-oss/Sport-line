@@ -1,1 +1,15 @@
+//utilidades
+@use "utilities/variables";
+@use "utilities/mixins";
+@use "utilities/animations";
 
+//componentes
+
+@use "components/footer";
+@use "components/header";
+
+//pages
+@use "pages/index";
+@use "pages/contacto";
+@use "pages/nosotros";
+@use "pages/productos.scss"

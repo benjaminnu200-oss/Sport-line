@@ -1,3 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oswald;
+  color: aliceblue;
+}
 
+body {
+  background-image: url(../assets/fondo.png);
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.active {
+  background-color: grey;
+  color: aliceblue;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 40px;
+}
+.footer .redes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+.footer .redes .logos {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.footer .redes .rs {
+  list-style: none;
+  text-decoration: none;
+}
+.footer .redes img.logos {
+  height: 50px;
+  width: auto;
+  margin: 0;
+}
+.footer .redes img.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 6vh;
+  width: auto;
+}
+.footer .contenedor-textos {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.footer .contenedor-textos .derechos {
+  color: beige;
+  font-size: 1.2rem;
+  font-family: Audiowide;
+}
+.footer .contenedor-textos .creador {
+  color: beige;
+  font-size: 1.2rem;
+  font-family: Audiowide;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .footer .redes {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .footer .contenedor-textos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-between;
+    gap: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.header .navbar {
+  width: 100%;
+}
+.header .navbar .container-fluid .navbar-brand img.logoNav {
+  width: auto;
+  height: 20vh;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .header {
+    height: auto;
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 20px;
+  }
+  .header .navbar .container-fluid .navbar-brand img.logoNav {
+    width: auto;
+    height: 10vh;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .header {
+    height: auto;
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .navbar .container-fluid .navbar-brand img.logoNav {
+    width: auto;
+    height: 10vh;
+  }
+}
+
+.banner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 4rem;
+  grid-template-areas: "text1 text1 imgA imgB" "text2 text2 imgC imgD";
+}
+.banner .item.a {
+  grid-area: imgA;
+}
+.banner .item.b {
+  grid-area: imgB;
+}
+.banner .item.c {
+  grid-area: imgC;
+}
+.banner .item.d {
+  grid-area: imgD;
+}
+.banner .item.e {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  grid-area: text1;
+  color: #80ff00;
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+}
+.banner .item.f {
+  grid-area: text2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: #80ff00;
+  text-align: center;
+  z-index: 10;
+}
+.banner .item.f .productos-boton {
+  background-color: aliceblue;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  margin: 2rem;
+}
+.banner .img-banner {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.main-formulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  min-height: 100vh;
+  padding: 20px;
+}
+.main-formulario .formulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+.main-formulario .formulario input:focus {
+  background-color: gray;
+  color: aliceblue;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 40px;
+}
+.footer .redes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+.footer .redes .logos {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.footer .redes .rs {
+  list-style: none;
+  text-decoration: none;
+}
+.footer .redes img.logos {
+  height: 50px;
+  width: auto;
+  margin: 0;
+}
+.footer .redes img.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 6vh;
+  width: auto;
+}
+.footer .contenedor-textos {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.footer .contenedor-textos .derechos {
+  color: beige;
+  font-size: 1.2rem;
+  font-family: Audiowide;
+}
+.footer .contenedor-textos .creador {
+  color: beige;
+  font-size: 1.2rem;
+  font-family: Audiowide;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .footer .redes {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .footer .contenedor-textos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  align-content: center;
+}
+.nosotros p.historia {
+  font-size: 2rem;
+  color: aliceblue;
+  padding: 0.5rem;
+  margin: 2rem;
+}
+.nosotros img.benjayagus {
+  height: 50vh;
+  width: 50vh;
+  margin: 100px;
+  border-radius: 75px;
+}
+.nosotros .link {
+  font-size: 2rem;
+  color: rgb(70, 5, 131);
+  padding: 0.5rem;
+  margin: 2rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

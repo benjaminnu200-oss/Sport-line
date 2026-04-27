@@ -1,0 +1,26 @@
+@mixin flex($dir, $wr, $jc, $ai, $gap){ 
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wr;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}
+
+@mixin tablet{
+    @media (min-width:561px) and (max-width:968px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (min-width:300px) and (max-width:560px){
+        @content;
+    }
+}
+@mixin grid ($columnas,$filas, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr); 
+    grid-template-rows: repeat($filas, 1 fr);
+    gap: $gap
+}

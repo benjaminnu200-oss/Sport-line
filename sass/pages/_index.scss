@@ -1,0 +1,66 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.banner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+
+    grid-template-areas:
+        "text1 text1 imgA imgB"
+        "text2 text2 imgC imgD";
+
+    .item.a {
+        grid-area: imgA;
+    }
+
+    .item.b {
+        grid-area: imgB;
+    }
+
+    .item.c {
+        grid-area: imgC;
+    }
+
+    .item.d {
+        grid-area: imgD;
+    }
+
+    .item.e {
+        @include m.flex (row,nowrap,center,center,0);
+        grid-area: text1;
+        color: #80ff00;
+        text-align: center;
+        padding: 20px;
+        z-index: 10;
+    }
+
+    .item.f {
+        grid-area: text2;
+        @include m.flex (column,nowrap,center,center,0);
+        color: #80ff00;
+        text-align: center;
+        z-index: 10;
+
+        .productos-boton {
+            background-color: aliceblue;
+            color:black;
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem 2rem;
+            margin: 2rem;
+        }
+    }
+
+    .img-banner {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+}

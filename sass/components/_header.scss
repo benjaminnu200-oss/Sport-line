@@ -1,0 +1,60 @@
+@use "../utilities/mixins" as m;
+
+.header {
+    .navbar {
+        width: 100%;
+        .container-fluid {
+            .navbar-brand {
+                img.logoNav {
+                    width: auto;
+                    height: 20vh;
+                }
+            }
+        }
+    }
+
+    @include m.tablet {
+        height: auto;
+        width: 100%;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .navbar {
+            .container-fluid {
+                .navbar-brand {
+                    img.logoNav {
+                        width: auto;
+                        height: 10vh;
+                    }
+                }
+            }
+        }
+    }
+
+    @include m.mobile {
+        height: auto;
+        width: 100%;
+
+        h1 {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar {
+            .container-fluid {
+                .navbar-brand {
+                    img.logoNav {
+                        width: auto;
+                        height: 10vh;
+                    }
+                }
+            }
+        }
+
+    }
+}

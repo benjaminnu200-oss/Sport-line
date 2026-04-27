@@ -1,0 +1,96 @@
+@use "../utilities/mixins" as m;
+@use "../utilities/variables" as v;
+
+.main-formulario {
+    @include m.flex (column, nowrap, center, center, 0);
+    min-height: 100vh;
+    padding: 20px;
+
+    .formulario {
+        @include m.flex (column, nowrap, center, center, 0);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.5rem;
+        color: v.$colorPrincipal;
+
+        input:focus {
+            background-color: gray;
+            color: v.$colorPrincipal
+        }
+    }
+}
+
+.footer {
+    @include m.flex(column, nowrap, center, center, 50px);
+    width: 100%;
+    padding: 40px;
+
+    .redes {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 50px;
+
+        .logos {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .rs {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        img.logos {
+            height: 50px;
+            width: auto;
+            margin: 0;
+        }
+
+        img.whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            height: 6vh;
+            width: auto;
+        }
+    }
+
+    .contenedor-textos {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        .derechos {
+            color: beige;
+            font-size: 1.2rem;
+            font-family: v.$fuenteSecundaria;
+        }
+
+        .creador {
+            color: beige;
+            font-size: 1.2rem;
+            font-family: v.$fuenteSecundaria;
+        }
+    }
+
+    @include m.tablet {
+        .redes {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include m.mobile {
+        .contenedor-textos {
+            @include m.flex(column, nowrap, center, center, 15px);
+            width: 100%;
+            font-size: 0.9rem
+        }
+    }
+}

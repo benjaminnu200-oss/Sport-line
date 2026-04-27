@@ -1,0 +1,65 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+.footer {
+    @include m.flex(column, nowrap, center, center,50px);
+    width: 100%;
+    padding: 40px;
+    .redes {
+        display: flex;
+        justify-content: space-around; 
+        width: 100%;
+        margin-top: 50px;
+            .logos {
+                display: flex;
+                flex-direction: row;   
+                list-style: none;
+                gap: 20px;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+                .rs {
+                    list-style: none;
+                    text-decoration: none;
+            }
+            img.logos{
+                height: 50px;        
+                width: auto;
+                margin: 0;
+                } 
+            img.whatsapp {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                height: 6vh;
+                width: auto;
+            }
+        }
+                .contenedor-textos{
+                    display: flex;
+                    justify-content: space-between; 
+                    width: 90%;
+                    .derechos {
+                        color: beige;
+                        font-size: 1.2rem ;
+                        font-family: v.$fuenteSecundaria;
+                    }
+                    .creador {
+                        color: beige;
+                        font-size: 1.2rem;
+                        font-family: v.$fuenteSecundaria;
+                    }
+                }
+                @include m.tablet {
+                    .redes {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                @include m.mobile {
+                    .contenedor-textos{
+                        @include m.flex(column, nowrap, center, space-between,15px); 
+                        width: 100%;
+                        font-size: 0.9rem
+                    }
+                }
+            }

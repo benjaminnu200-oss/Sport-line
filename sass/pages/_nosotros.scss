@@ -2,7 +2,7 @@
 @use "../utilities/variables" as v;
 
 .nosotros {
-    @include m.flex (column, nowrap, center, center,0);
+    @include m.flex (column, nowrap, center, center, 0);
     align-content: center;
 
     p.historia {
@@ -24,5 +24,19 @@
         color: rgb(70, 5, 131);
         padding: 0.5rem;
         margin: 2rem;
+    }
+
+    @include m.mobile {
+            p.historia {
+                font-size: 1rem;
+            }
+            img.benjayagus {
+                height: 35vh;
+                width: 35vh;
+            }
+            .link {
+                font-size: 1rem;
+            }
+        
     }
 }

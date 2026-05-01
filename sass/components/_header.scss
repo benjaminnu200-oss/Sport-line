@@ -8,6 +8,12 @@
                 img.logoNav {
                     width: auto;
                     height: 20vh;
+                    transform: rotateX(20deg) rotateX(10deg);
+                    transition: 0.5s;
+                    &:hover {
+                        transform: rotateX(0deg) rotateY(0deg);
+
+                    }
                 }
             }
         }

@@ -32,35 +32,62 @@
     }
 
     .item.e {
-        @include m.flex (row,nowrap,center,center,0);
+        @include m.flex (row, nowrap, center, center, 0);
         grid-area: text1;
         color: #80ff00;
         text-align: center;
         padding: 20px;
         z-index: 10;
+        perspective: 900px;
+        transform-style: preserve-3d;
+        transition: transform 3.5s ease;
+        transform: translateZ(25px);
+        &:hover {
+            transform: rotateX(15deg) rotateY(25deg);
+        
+        }
     }
 
     .item.f {
         grid-area: text2;
-        @include m.flex (column,nowrap,center,center,0);
+        @include m.flex (column, nowrap, center, center, 0);
         color: #80ff00;
         text-align: center;
         z-index: 10;
 
         .productos-boton {
             background-color: aliceblue;
-            color:black;
+            color: black;
             border: none;
             border-radius: 10px;
             padding: 0.5rem 2rem;
             margin: 2rem;
-        }
-    }
+            transition: all 0.3s ease;
 
-    .img-banner {
-        height: 100%;
-        width: 100%;
-        border-radius: 5px;
-        object-fit: cover;
+            &:hover {
+                background-color: #adff2f;
+                color: black;
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+    }
+    @include m.mobile {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "text1 text1"
+            "text2 text2"
+            "imgA imgB"
+            "imgC imgD";
+            margin-top: 2rem;
+}
+
+.img-banner {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
     }
 }

@@ -142,7 +142,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 1fr;
   gap: 0;
   width: 100%;
   height: auto;
@@ -252,6 +252,23 @@ body {
     object-fit: cover;
     transition: none !important;
     transform: none !important;
+  }
+  .banner .item.f h1 {
+    font-size: 1.5rem;
+  }
+  .banner .item.f p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .banner {
+    grid-template-rows: 1fr 1fr;
+  }
+  .banner .item.f h1 {
+    font-size: 2rem;
+  }
+  .banner .item.f p {
+    font-size: 15px;
   }
 }
 

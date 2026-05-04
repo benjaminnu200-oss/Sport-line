@@ -5,7 +5,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     gap: 0;
     width: 100%;
     height: auto;
@@ -94,7 +94,6 @@
             "imgA imgB"
             "imgC imgD";
         margin-top: 2rem;
-
         .item.a,
         .item.b,
         .item.c,
@@ -111,7 +110,25 @@
             transition: none !important;
             transform: none !important;        
         }
+    }
+    .item.f {
+        h1 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 15px;
         }
     }
-
+    }
+    @include m.tablet {
+            grid-template-rows: 1fr 1fr;
+        .item.f {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
 }

@@ -10,19 +10,29 @@
     width: 100%;
     height: auto;
     margin-top: 4rem;
-
     grid-template-areas:
         "text1 text1 imgA imgB"
         "text2 text2 imgC imgD";
-
+    .item.a, .item.b , .item.c, .item.d {
+        overflow: hidden;
+        position: relative;
+        .img-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease !important;
+            display: block;
+        }
+        &:hover .img-banner {
+            transform: scale(1.2);
+        }
+    }
     .item.a {
         grid-area: imgA;
     }
-
     .item.b {
         grid-area: imgB;
     }
-
     .item.c {
         grid-area: imgC;
     }
@@ -42,9 +52,10 @@
         transform-style: preserve-3d;
         transition: transform 3.5s ease;
         transform: translateZ(25px);
+
         &:hover {
             transform: rotateX(15deg) rotateY(25deg);
-        
+
         }
     }
 
@@ -54,6 +65,9 @@
         color: #80ff00;
         text-align: center;
         z-index: 10;
+        p {
+            font-size: 2rem;
+        }
 
         .productos-boton {
             background-color: aliceblue;
@@ -65,29 +79,39 @@
             transition: all 0.3s ease;
 
             &:hover {
-                background-color: #adff2f;
+                background-color: #80ff00;
                 color: black;
-                transform: translateY(-5px);
+                transform: translateY(5px);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             }
         }
-
     }
     @include m.mobile {
-
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "text1 text1"
             "text2 text2"
             "imgA imgB"
             "imgC imgD";
-            margin-top: 2rem;
-}
+        margin-top: 2rem;
 
-.img-banner {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
+        .item.a,
+        .item.b,
+        .item.c,
+        .item.d,
+        .item.e,
+        .item.f {
+            transition: none !important;
+            transform: none !important;
+            .img-banner {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            transition: none !important;
+            transform: none !important;        
+        }
+        }
     }
+
 }

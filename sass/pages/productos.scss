@@ -16,11 +16,18 @@ main {
             height: 100%;
             margin-bottom: 20px;
             border: none;
+            overflow: hidden;
+            
 
             .card-img-top {
                 height: 300px;
                 object-fit: cover;
                 object-position: top;
+                transition: transform 1s ease;
+                transform-origin: center;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
 
             .card-body {
@@ -87,11 +94,13 @@ main {
     @include m.mobile {
         padding-left: 10%;
         padding-right: 10%;
+        animation: none;
     }
     
     @include m.tablet {
         padding-left: 10%;
         padding-right: 10%;
+        animation: none;
     }
 }
 

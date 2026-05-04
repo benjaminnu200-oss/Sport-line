@@ -15,9 +15,9 @@
         color: black;
         input {
             background-color:v.$colorPrincipal;
-            color:black
+            color:black;
+            border-radius: 5px;       
         }
-
         input:focus {
             background-color: rgb(170, 146, 146);
             color: black;
